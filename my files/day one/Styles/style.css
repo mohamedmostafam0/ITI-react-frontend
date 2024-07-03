@@ -1,0 +1,25 @@
+
+.c1 {
+    color:yellow;
+}
+
+.center {
+    text-align: center;
+}
+
+body {
+    background-color: grey;
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+.left {
+    text-align: left;
+}
+
+.color {
+    color: red;
+}

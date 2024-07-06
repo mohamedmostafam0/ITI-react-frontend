@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <link rel="stylesheet" type="text/css" href="Style/Styles.css">
+  </head>
+  
+  <body>
+  <h1>
+    <u><b>Registration Form</b></u>
+  </h1>  
+<form method="post" action="https://formspree.io/f/mjkbvrop">
+
+    <table border="2" >
+        <tr>
+            <td>First Name</td>
+            <td colspan="2">
+                  <input type="text" placeholder="Enter your first name">
+                </td>
+            </tr>
+            
+            <tr>
+                <td>Last Name</td>
+                <td colspan="2">
+                    <input type="text" placeholder="Enter your last name">
+                </tr>
+                
+                <tr>
+                    <td>Email</td>
+                    <td colspan="2">
+                        <input type="text" placeholder="Email">
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td >
+                        <input type="text" placeholder="Password">
+                    </tr>
+                    
+                    <tr>
+                        <td rowspan="2">Gender</td>
+                        <td>
+                            <label><input type="radio" name="gender" value="male"> Male</label>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            <label><input type="radio" name="gender" value="female"> Female</label>
+                        </td>    
+                    </tr></tr>
+                    
+                    <tr>
+                        <td>Country</td>
+                <td>
+                    <select>
+                        <optgroup label="Africa">
+                            <option>wahed</option>
+                            <option>etneen</option>
+                            <option>talata</option>
+                        </optgroup>
+                        <optgroup label="Asia" disabled>
+                            <option>bla</option>
+                            <option>bla</option>
+                            <option>bla</option>
+                            <optgroup label=Europe>
+                                <option>ok</option>
+                                <option>ko</option>
+                </optgroup>
+            </optgroup>
+        </select>
+    </td>
+</tr>
+
+<tr>
+    <td>Birthday</td>
+    <td>
+        <input type="date">
+    </td>
+</tr>
+<tr>
+    <td colspan="2">
+        <div>
+            <u>Interests</u>
+        </div>
+    </td>
+</tr>
+
+<tr>
+    <td colspan="2">
+    <input type="checkbox"  id="interest1" value="Sports">
+    <label for="interest1">Sports</label>
+    <input type="checkbox"  id="interest2" value="Music">
+    <label for="interest2">Music</label>
+    <input type="checkbox"  id="interest3" value="Fashion">
+    <label for="interest3">Fashion</label><br>
+    <input type="checkbox"  id="interest4" value="Reading">
+    <label for="interest4">Reading</label>
+    <input type="checkbox"  id="interest5" value="Shopping">
+    <label for="interest5">Shopping</label>
+    <input type="checkbox"  id="interest6" value="Movies">
+    <label for="interest6">Movies</label>
+    
+</td>
+</tr>
+
+
+<tr>
+    <td colspan="2">
+        <u><b>Bio</b></u>
+    </td>
+</tr>
+
+
+<tr>
+    <td colspan="2">
+        <textarea cols="20' rows="10"></textarea>
+    </td>
+</tr>
+
+
+<tr>
+    <td colspan="2">
+        <input type="submit" value="Register">
+        
+        <input type="reset" value="Clear">
+    </td>
+</tr>
+
+
+</table> 
+</form>
+</body>
+</html>

@@ -1,0 +1,54 @@
+textarea {
+    resize: none;
+}
+
+div{ 
+    text-align: center;
+    padding: 2px;
+    border-radius: 2px;
+    outline: blue;
+}
+
+table{
+text-align: center;
+margin: auto;
+border: 2px grey solid;
+border-width: medium;
+padding: 5px;
+border-spacing: 10px;
+border-collapse: collapse;
+}
+
+td{
+    font-weight: bold;
+    padding: 5px;
+}
+
+body {
+    text-align: center;
+    background-color: lightgray;
+}
+
+left {
+    text-align: left;
+}
+
+form {
+    text-align: left;
+    margin: auto;
+}
+
+legend {
+    font-size: 24px; /* Adjust font size as desired */
+    color: red; /* Sets the color to red */
+}
+
+.Login {
+    border: 2px solid blue; 
+    padding: 10px; 
+}
+
+fieldset {
+    border: 7px solid lightcoral; /* Sets a solid blue border around the fieldset */
+    padding: 10px;
+}

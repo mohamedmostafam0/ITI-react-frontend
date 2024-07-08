@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>User Registration</title>
+</head>
+<body>
+  <h2>User Registration Form</h2>
+  <form action="WelcomingPage.html" method="get">
+    <label for="name">Name:</label><br />
+    <input type="text" id="name" name="name" required /><br /><br />
+
+    <label for="email">Email:</label><br />
+    <input type="email" id="email" name="email" required /><br /><br />
+
+    <label for="password">Password:</label><br />
+    <input type="password" id="password" name="password" required /><br /><br />
+
+    <label for="job_title">Job Title:</label><br />
+    <input type="text" id="job_title" name="title" required /><br /><br /> <!-- Use name="title" to match query parameter -->
+
+    <label for="mobile">Mobile:</label><br />
+    <input type="tel" id="mobile" name="mobile" required /><br /><br />
+
+    <label for="gender">Gender:</label><br />
+    <select id="gender" name="gender" required>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="other">Other</option>
+    </select><br /><br />
+
+    <label for="address">Address:</label><br />
+    <textarea id="address" name="address" required></textarea><br /><br />
+
+    <input type="submit" value="Register" />
+  </form>
+</body>
+</html>

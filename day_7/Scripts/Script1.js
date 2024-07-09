@@ -3,12 +3,12 @@ document.write("<hr>");
 
 var index = 0;
 var images = [
-  "1.jpg",
-  "2.jpg",
-  "3.jpg",
-  "4.jpg",
-  "5.jpg",
-  "6.jpg",
+  "Images/1.jpg",
+  "Images/2.jpg",
+  "Images/3.jpg",
+  "Images/4.jpg",
+  "Images/5.jpg",
+  "Images/6.jpg",
 ];
 
 var slideshowInterval;

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <form>
+      <input type="text" name="f_name" />
+      <input type="text" name="l_name" />
+      <input type="submit" value="submit" />
+      <input type="button" value="submit" onclick="sumbitForm(this)" />
+      <input type="reset" value="clear" />
+    </form> -->
+    <!-- <input type="text" name="f_name" onchange="displayVal(this)" /> -->
+    <!-- <input type="text" name="f_name" onfocus="displayVal(this)" /> -->
+    <!-- <input
+      type="text"
+      name="f_name"
+      oninput="displayVal(this)"  
+    /> -->
+    <select id="menu" multiple>
+      <option>-----Select-----</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+    </select>
+    <input type="button" value="select" onclick="showSelection()" />
+    <div id="id1"></div>
+
+    <!--
+object (property,methods) 
+attribute=>property
+
+-->
+    <script>
+      //   function sumbitForm(input) {
+      //     // document.forms[0].submit();
+      //     input.type = "text";
+      //   }
+
+      //   function displayVal(val) {
+      //     console.log(val.value);
+      //   }
+
+      function showSelection() {
+        //clear
+        document.getElementById("id1").innerHTML = "";
+        var sel = document.getElementById("menu");
+        var index = sel.selectedIndex;
+        var arrOption = sel.options;
+        // if (index === 0) {
+        //   alert("Please select an option");
+        // } else {
+        //   document.getElementById("id1").innerHTML = sel.options[index].value;
+        // }
+        //multiple selection
+        for (var i = 0; i < arrOption.length; i++) {
+          if (arrOption[i].selected) {
+            document.getElementById("id1").innerHTML +=
+              "<br>" + arrOption[i].text;
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="Scripts/enhencedCookie.js"></script>
+    <title>Enhanced Cookie Registration</title>
+    <style>
+      .selected {
+        border: 3px solid blue;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Enter your first name</p>
+    <input
+      type="text"
+      placeholder="Your first name"
+      name="fname"
+      id="txt1"
+    /><br />
+
+    <p>Enter your age</p>
+    <input
+      type="text"
+      placeholder="Your Age"
+      name="Age"
+      id="txt2"
+    /><br /><br />
+
+    <input type="hidden" id="gender" name="gender" />
+
+    <label>Select Gender:</label><br />
+    <img
+      src="Images/1.jpg"
+      id="male"
+      onclick="setGender('male')"
+      alt="Male"
+      style="cursor: pointer"
+    />
+    <img
+      src="Images/2.jpg"
+      id="female"
+      onclick="setGender('female')"
+      alt="Female"
+      style="cursor: pointer"
+    /><br /><br />
+
+    <label for="Color">Choose a colour:</label>
+    <select name="Color" id="Color">
+      <option value="blue">Blue</option>
+      <option value="green">Green</option>
+      <option value="red">Red</option></select
+    ><br /><br />
+
+    <input type="checkbox" id="k" /> <label for="k">Remember me</label
+    ><br /><br />
+
+    <button onclick="registerUser()">Submit</button>
+  </body>
+</html>

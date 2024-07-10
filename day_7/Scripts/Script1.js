@@ -2,6 +2,7 @@ document.write("<h1> Showing pics </h1>");
 document.write("<hr>");
 
 var index = 0;
+
 var images = [
   "Images/1.jpg",
   "Images/2.jpg",
@@ -40,10 +41,8 @@ function previousImage() {
 
 function startSlideshow() {
   stopSlideshow(); 
-  slideshowInterval = setInterval(function() {
-    index = (index + 1) % images.length;
-    displayImage();
-  }, 2000); 
+  slideshowInterval = setInterval(function() {index = (index + 1) % images.length;displayImage();},
+   2000); 
 }
 
 function stopSlideshow() {

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" placeholder="fname" name="fname" id="txt1" />
+    <input type="email" placeholder="email" name="email" id="txt2" />
+    <input type="submit" value="SaveInfo" onclick="saveInfo()" />
+    <input type="button" value="Get Info" onclick="getInfo()" />
+    <script>
+      function saveInfo() {
+        var date = new Date();
+        date.setDate(date.getDate() + 1);
+        var key1 = document.getElementById("txt1").name;
+        var key2 = document.getElementById("txt2").name;
+        var val1 = document.getElementById("txt1").value;
+        var emailval = document.getElementById("txt2").value;
+        document.cookie = key1 + "=" + val1 + ";expires=" + date.getUTCDate();
+        document.cookie =
+          key2 + "=" + emailval + ";expires=" + date.getUTCDate();
+      }
+      function getInfo() {
+        var associativeCookies = [];
+        // console.log(document.cookie);
+        var cookies = document.cookie.split(";");
+        console.log(cookies);
+        for (var i = 0; i < cookies.length; i++) {
+          associativeCookies[cookies[i].split("=")[0].trim()] = cookies[i]
+            .split("=")[1]
+            .trim();
+        }
+        return associativeCookies;
+      }
+      var result = getInfo();
+      console.log(result);
+      console.log(result.fname);
+      console.log(result["fname"]);
+
+      console.log(result.email);
+    </script>
+  </body>
+</html>

@@ -6,10 +6,10 @@ var animationInterval;
 function moveMarble() {
     marbles.forEach((marble, index) => {
         if (index === currentIndex) {
-            marble.src = 'marble3.jpg';
+            marble.src = 'Images/marble3.jpg';
            
         } else {
-            marble.src = 'marble1.jpg';
+            marble.src = 'Images/marble1.jpg';
         }
     });
     currentIndex = (currentIndex + 1) % marbles.length;
@@ -31,11 +31,7 @@ marbles.forEach((marble, index) => {
     marble.addEventListener('mouseleave', () => {
         startAnimation();
     });
-    marble.addEventListener('hover', () => {
-        interval = 1000 
-        stopAnimation();
-        startAnimation();
-    });
+    
 });
 
 startAnimation();

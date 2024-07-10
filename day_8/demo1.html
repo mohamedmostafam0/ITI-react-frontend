@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Key Press Event</title>
+  </head>
+  <body>
+    <script>
+      function handleKeyDown(event) {
+        const asciiCode = event.keyCode;
+        const key = String.fromCharCode(asciiCode);
+
+        // Check if Alt, Ctrl, or Shift key was pressed
+        const isAltPressed = event.altKey;
+        const isCtrlPressed = event.ctrlKey;
+        const isShiftPressed = event.shiftKey;
+
+        let message = `Key pressed: ${key}\nASCII code: ${asciiCode}\n`;
+        if (isAltPressed) {
+          message += "Alt key was pressed.\n";
+        }
+        if (isCtrlPressed) {
+          message += "Ctrl key was pressed.\n";
+        }
+        if (isShiftPressed) {
+          message += "Shift key was pressed.\n";
+        }
+
+        alert(message);
+      }
+
+      // Add event listener for keydown event
+      document.addEventListener("keydown", handleKeyDown);
+    </script>
+  </body>
+</html>

@@ -29,7 +29,6 @@ function EnterOperator(op) {
 
 function EnterEqual() {
     if (resultShown) return;
-
     try {
         const result = eval(currentInput);
         currentInput = result.toString();

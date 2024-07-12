@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <video src="frozen.mp4" controls></video>
+      <button onclick="play()">Play</button>
+      <button onclick="pause()">Pause</button>
+      <button id="muteButton" onclick="toggleMute()">Mute</button>
+      <!-- <button onclick="mute()">mute</button>
+      <button onclick="unmute()">Unmute</button> -->
+      <button onclick="GoBack()"><<</button>
+      <button onclick="BackTenSeconds()"><</button>
+      <button onclick="SkipTenSeconds()">></button>
+      <button onclick="End()">>></button>
+      <button onclick="getLocation()">Try It</button>
+    </div>
+
+    <div>
+      <label>Volume: </label>
+      <input
+        type="range"
+        id="volumeControl"
+        min="0"
+        max="1"
+        step="0.1"
+        value="1"
+        oninput="changeVolume(this.value)"
+      />
+
+      <label>Speed: </label>
+      <input
+        type="range"
+        id="speedControl"
+        min="0.5"
+        max="2"
+        step="0.1"
+        value="1"
+        oninput="changeSpeed(this.value)"
+      />
+    </div>
+    <script>
+      const x = document.getElementById("demo");
+
+      function getLocation() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(
+            successCallback,
+            errorCallback,
+            {
+              enableHighAccuracy: true,
+              timeout: 5000, // Maximum time (in milliseconds) before timing out
+              maximumAge: 0, // Maximum age (in milliseconds) of a cached position
+            }
+          );
+        } else {
+          x.innerHTML = "Geolocation is not supported by this browser.";
+          console.log(showPosition);
+        }
+      }
+
+      function showPosition(position) {
+        x.innerHTML =
+          "Latitude: " +
+          position.coords.latitude +
+          "<br>Longitude: " +
+          position.coords.longitude;
+        console.log(x);
+      }
+      function play() {
+        document.getElementsByTagName("video")[0].play();
+      }
+      function pause() {
+        document.getElementsByTagName("video")[0].pause();
+      }
+      function toggleMute() {
+        document.getElementsByTagName("video")[0].muted =
+          !document.getElementsByTagName("video")[0].muted;
+        Mute.textContext = document.getElementsByTagName("video")[0].muted
+          ? "unmute"
+          : "mute";
+      }
+      function BackTenSeconds() {
+        document.getElementsByTagName("video")[0].currentTime -= 10;
+      }
+      function GoBack() {
+        document.getElementsByTagName("video")[0].currentTime = 0;
+      }
+
+      function SkipTenSeconds() {
+        document.getElementsByTagName("video")[0].currentTime += 10;
+      }
+      function End() {
+        document.getElementsByTagName("video")[0].currentTime = video.duration;
+      }
+
+      function changeVolume(value) {
+        document.getElementsByTagName("video")[0].volume = value;
+      }
+
+      function changeSpeed(value) {
+        document.getElementsByTagName("video")[0].playbackRate = value;
+      }
+      document.getElementsByTagName("video")[0].volume = 1;
+      document.getElementsByTagName("video")[0].playbackRate = 1;
+      document.getElementsByTagName("video")[0].volume = 1; //max =1 min=0
+      console.log(document.getElementsByTagName("video")[0].currentTime); //current time of the video
+      console.log(document.getElementsByTagName("video")[0].duration);
+      document.getElementsByTagName("video")[0].playbackRate = 1;
+    </script>
+  </body>
+</html>

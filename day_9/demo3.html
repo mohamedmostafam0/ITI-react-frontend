@@ -1,0 +1,51 @@
+<label>Red: </label>
+<input
+  id="red"
+  type="range"
+  min="0"
+  max="1"
+  step="0.1"
+  value="0.5"
+  oninput="ChangeColor()"
+/>
+
+<label>Blue: </label>
+<input
+  id="blue"
+  type="range"
+  min="0"
+  max="1"
+  step="0.1"
+  value="0.5"
+  oninput="ChangeColor()"
+/>
+
+<label>Green: </label>
+<input
+  id="green"
+  type="range"
+  min="0"
+  max="1"
+  step="0.1"
+  value="0.5"
+  oninput="ChangeColor()"
+/>
+
+<p id="ColoredText">
+  Change the three color ranges above and observe my color change.
+</p>
+
+<script>
+  function ChangeColor() {
+    var redValue = document.getElementById("red").value;
+    var blueValue = document.getElementById("blue").value;
+    var greenValue = document.getElementById("green").value;
+
+    //rakam lazem ykoon ma been 0-255 for each color
+    var red = Math.floor(redValue * 255);
+    var green = Math.floor(greenValue * 255);
+    var blue = Math.floor(blueValue * 255);
+    var textColor = "rgb(" + red + "," + green + "," + blue + ")";
+    document.getElementById("ColoredText").style.color = textColor;
+  }
+</script>

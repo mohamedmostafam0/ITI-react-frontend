@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* html {
+              font-size: 40px;
+            } */
+      /* div { */
+      /* background-color: aqua; */
+      /* width: 500px;
+              height: 500px; */
+      /*view port*/
+      /* width: 50vw;
+              height: 50vh;
+              width: 50vh;
+              height: 50vw; */
+      /*font relative */
+      /* font-size: 20px; */
+      /* width: 5em;
+              height: 10em; */
+      /* width: 5rem;
+              height: 10rem; */
+      /* } */
+      /* #container {
+        background-color: red;
+        width: 100px;
+        height: 100px;
+      }
+      #inner {
+        background-color: blue;
+        color: white;
+        /* position: fixed; */
+      /* position: absolute;
+        margin: 50%; */
+      /* }  */
+
+      .container {
+        background-color: aqua;
+        width: 200px;
+        /* height: 400px; */
+        /* child become inline*/
+        display: flex;
+        /* parent become inline*/
+        /* display: inline-flex; */
+        /* flex-direction: row;
+        flex-wrap: wrap-reverse; */
+        /* combination of flex-direction and flex-wrap*/
+        flex-flow: row;
+        /* justify-content: center; */
+        /* justify-content: flex-end;
+        justify-content: flex-start; */
+        /* justify-content: space-between; */
+        /* justify-content: space-around; */
+        justify-content: space-evenly;
+        /* align-items: flex-end;
+        align-items: flex-start;
+        align-items: center; */
+        /* align-items: stretch; (default)*/
+        /* align-content: flex-end; */
+        /* align-content: flex-start;
+        align-content: center;
+        align-content: space-between;*/
+        /* align-content: space-around; */
+        /* align-content: space-evenly;  */
+        /* gap: 10px; */
+        /* gap: 100px 10px; */
+      }
+      .container > div {
+        background-color: pink;
+      
+        padding: 5px;
+      }
+      .child2 {
+        /* order: 1; */
+        /* flex-grow: 2; */
+        /* flex-shrink: 0;
+        flex-basis: 800px;
+        width: 500px;
+        height: 900px; */
+        align-self: stretch;
+      }
+      .child1 {
+        /* flex-grow: 1; */
+        /* width: 500px;
+        flex-shrink: 0; */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- div.container>div.child*3 -->
+    <div class="container">
+      <div class="child1">1</div>
+      <div class="child2">2</div>
+      <div class="child3">3</div>
+      <!-- <div class="child3">3</div>
+      <div class="child1">1</div>
+      <div class="child2">2</div>
+      <div class="child3">3</div>
+      <div class="child1">1</div>
+      <div class="child2">2</div>
+      <div class="child3">3</div>
+      <div class="child1">1</div>
+      <div class="child2">2</div>
+      <div class="child3">3</div>
+      <div class="child1">1</div>
+      <div class="child2">2</div>
+      <div class="child3">3</div>
+      <div class="child1">1</div>
+      <div class="child2">2</div>
+      <div class="child3">3</div>
+      <div class="child1">1</div>
+      <div class="child2">2</div>
+      <div class="child3">3</div>
+      <div class="child1">1</div>
+      <div class="child2">2</div>
+      <div class="child3">3</div>
+      <div class="child1">1</div>
+      <div class="child2">2</div>
+      <div class="child3">3</div> -->
+    </div>
+
+    <!-- <div id="container">
+      <div id="inner">hello</div>
+    </div> -->
+  </body>
+</html>

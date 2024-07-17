@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <style>
+    div input:invalid {
+      border: 2px solid red;
+    }
+    div input:valid {
+      border: 2px solid blue;
+    }
+    div input:valid + p {
+      display: none;
+    }
+    div input:invalid + p {
+      display: block;
+    }
+  </style>
+  <body>
+    <div>
+      <h1>Change email address</h1>
+
+      <input
+        type="text"
+        id="usernameInput"
+        required
+        pattern="[a-zA-Z]{3,}"
+        placeholder="Username"
+      />
+      <p>Please enter username in the correct format</p>
+
+      <input
+        type="email"
+        id="emailInput"
+        required
+        pattern="[a-zA-Z]{3}[0-9]{4}@gmail\.com"
+        placeholder="Email"
+      />
+      <p>Please enter email in the correct format</p>
+      <input type="button" value="Change" />
+    </div>
+  </body>
+</html>

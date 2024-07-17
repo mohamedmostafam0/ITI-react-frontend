@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      .base {
+        position: absolute;
+        top: 180px;
+        left: 120px;
+        font-size: 16px;
+      }
+      .math {
+        margin-top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="triangleCanvas" width="200" height="200"></canvas>
+    <div class="math">
+      According to Pythagoras theorem<br />
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <mi>c</mi>
+        <mo>=</mo>
+        <msqrt>
+          <mrow>
+            <msup>
+              <mi>a</mi>
+              <mn>2</mn>
+            </msup>
+            <mo>+</mo>
+            <msup>
+              <mi>b</mi>
+              <mn>2</mn>
+            </msup>
+          </mrow>
+        </msqrt>
+      </math>
+    </div>
+    <script>
+      const canvas = document.getElementById("triangleCanvas");
+      const ctx = canvas.getContext("2d");
+
+      ctx.beginPath();
+      ctx.moveTo(50, 150);
+      ctx.lineTo(150, 150);
+      ctx.lineTo(150, 50);
+      ctx.closePath();
+
+      ctx.fillStyle = "red";
+      ctx.fill();
+
+      ctx.font = "16px Arial";
+      ctx.fillText("a", 100, 160);
+      ctx.fillText("b", 75, 110);
+      ctx.fillText("c", 155, 110);
+    </script>
+  </body>
+</html>

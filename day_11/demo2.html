@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      canvas {
+        border: 1px solid;
+        display: block;
+        margin: 20px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="myCanvas" width="500" height="500"></canvas>
+
+    <script>
+      const canvas = document.getElementById("myCanvas");
+      const ctx = canvas.getContext("2d");
+
+
+      const centerX = canvas.width / 2;
+      const centerY = canvas.height / 2;
+      const outerRadius = 150;
+      const innerRadius = 110;
+
+      const outerGradient = ctx.createRadialGradient(
+        centerX,
+        centerY,
+        50,
+        centerX,
+        centerY,
+        outerRadius
+      );
+
+      outerGradient.addColorStop(0, "white");
+      outerGradient.addColorStop(1, "blue");
+      ctx.fillStyle = outerGradient;
+      ctx.beginPath();
+      ctx.arc(centerX, centerY, outerRadius, 0, 2 * Math.PI);
+      ctx.fill();
+      ctx.closePath();
+
+      const innerGradient = ctx.createRadialGradient(
+        centerX,
+        centerY,
+        0,
+        centerX,
+        centerY,
+        innerRadius
+      );
+      innerGradient.addColorStop(0, "white");
+      innerGradient.addColorStop(1, "blue");
+      ctx.fillStyle = innerGradient;
+      ctx.beginPath();
+      ctx.arc(centerX, centerY, innerRadius, 0, 2 * Math.PI);
+      ctx.fill();
+      ctx.closePath();
+
+      ctx.font = "205px Arial";
+      ctx.fillStyle = "white"; 
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+      ctx.fillText("N", centerX, centerY);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .navbar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        background-color: #f1f1f1;
+        flex-direction: row;
+        text-align: center;
+        gap: 10px;
+      }
+
+      .navbar div {
+        width: 400px;
+        font-weight: bold;
+      }
+
+      .Outer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        border: 2px solid black;
+        padding: 10px;
+        margin: 20px;
+        flex: 1 1 40%;
+      }
+
+      .content {
+        padding-bottom: 50px;
+        text-align: center;
+      }
+
+      .footer {
+        text-align: center;
+        background-color: #f1f1f1;
+        padding: 10px;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <div>Home</div>
+      <div>About</div>
+      <div>Services</div>
+      <div>Contact</div>
+    </div>
+
+    <div class="Outer">
+      <div class="container">
+        <div class="content">This is a flex item.</div>
+        <div class="footer">Footer</div>
+      </div>
+
+      <div class="container">
+        <div class="content">bla bla bla</div>
+        <div class="footer">Footer</div>
+      </div>
+    </div>
+  </body>
+</html>

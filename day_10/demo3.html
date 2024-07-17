@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      /*
+          user agent style 4)
+          external style 
+          internal style
+          inline style 1)
+          specifity (id,class,element)
+          */
+
+      .c1 {
+        color: black;
+      }
+
+      /* a {
+        color: red;
+      } */
+      /* div span a {
+        color: yellow;
+        background-color: black;
+      } */ /* direct child */
+      /* div span > a {
+        color: yellow;
+        background-color: black;
+      } */
+      /* adjacent sibling*/
+      div + p {
+        color: blue;
+      }
+      div ~ p {
+        color: aqua;
+      }
+      /* h1 ~ h2 + h1 {
+        color: brown;
+      } */
+      [href="#"] {
+        font-size: 20pt;
+      }
+      [href^="g"] {
+        color: green;
+      }
+      [href$="m"] {
+        color: blueviolet;
+      }
+      /*
+      pseudo class
+      */
+      /* #h1:active {
+        background-color: pink;
+        color: aqua;
+      } */
+      /* #h1:hover {
+        background-color: black;
+        color: white;
+      } */
+      [type="text"]:focus {
+        background-color: yellow;
+      }
+      h1:target {
+        color: pink;
+      }
+      input:invalid + p {
+        color: red;
+        display: block;
+      }
+      input:valid + p {
+        display: none;
+      }
+      /*
+      structure */
+
+      /* ul :first-child {
+        color: pink;
+      }
+      ul :last-child {
+        color: aqua;
+      } */
+      ul li:nth-child(odd) {
+        color: aqua;
+      }
+      ul li:nth-child(even) {
+        color: pink;
+      }
+      /* pseudo element */
+      p::first-letter {
+        font-size: 50pt;
+        color: red;
+      }
+      /* p::after{
+        content: "xyz";
+      } */
+      p::before{
+        content: "xyz";
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="h1">header</h1>
+    <!-- <a href="google.com" class="c1"> Google</a>
+    <div>
+      <span>
+        <a href="#"> hassh</a>
+        <p>
+          <a href="google.com"> Google</a>
+        </p>
+      </span>
+    </div>
+
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas tempore
+      minus, rem doloribus perferendis esse est assumenda libero necessitatibus
+      a iure ea adipisci tenetur dolore quidem modi iste dicta odit!
+    </div>
+    <p>hello</p>
+    <p>welcome</p>
+
+    <h1 id="h1">hhh</h1>
+    <h3>kkk</h3>
+    <h2>jjj</h2>
+    <h1>lll</h1>
+    <h2>aaa</h2>
+    <h1>bbb</h1> -->
+    <!-- <div>
+      <span>
+        <a href="#h1"> Go to header</a>
+        <p></p>
+      </span>
+    </div> -->
+    <!-- <input type="text" required pattern="[a-z]{3}" />
+    <p>invalid format</p>
+    <input type="email" required pattern="[A-Z]{3}[0-9]{4}@gmail\.com" />
+    <p>invalid format</p> -->
+
+    <ul>
+      <li>item 1</li>
+      <li>item 2</li>
+      <li>item 3</li>
+      <li>item 4</li>
+      <li>item 5</li>
+    </ul>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis, beatae?
+      In, nostrum perspiciatis fuga, impedit ratione corrupti dicta et
+      consequatur ad fugit sed quia ipsa culpa dolor est pariatur ab.
+    </p>
+  </body>
+</html>
